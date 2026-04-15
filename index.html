@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -81,7 +82,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .fe::placeholder{color:var(--text3);}
 .modal-btns{display:flex;gap:10px;margin-top:20px;}
 .btn-c{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:11px;color:var(--text2);cursor:pointer;font-size:14px;font-family:var(--sans);}
-.btn-s{flex:2;background:var(--a);border:none;border-radius:10px;padding:11px;color:#0d0d0f;font-weight:600;cursor:pointer;font-size:14px;font-family:var(--sans);transition:background .15s;}
+.btn-s{flex:2;background:#111111;border:none;border-radius:10px;padding:11px;color:#FFFFFF;font-weight:600;cursor:pointer;font-size:14px;font-family:var(--sans);transition:background .15s;}
 .btn-s:hover{background:#333333;}
 .msec{font-size:10px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin:16px 0 9px;}
 
@@ -96,14 +97,14 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .estatus{font-family:var(--sans);font-size:11px;color:var(--text3);}
 .einput-row{display:flex;gap:10px;align-items:center;}
 .ewrap{position:relative;flex:1;}
-.einput{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:12px 42px 12px 15px;color:var(--text);font-family:var(--sans);font-size:22px;font-weight:300;outline:none;transition:border-color .2s;-moz-appearance:textfield;}
+.einput{width:100%;background:#FFFFFF;border:1px solid rgba(0,0,0,0.12);border-radius:10px;padding:0 42px 0 15px;height:54px;color:var(--text);font-family:var(--sans);font-size:22px;font-weight:300;outline:none;transition:border-color .2s;-moz-appearance:textfield;}
 .einput::-webkit-outer-spin-button,.einput::-webkit-inner-spin-button{-webkit-appearance:none;}
 .einput:focus{border-color:var(--a);}
 .eunit{position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--text3);}
-.ebtn{background:#111111;color:#FFFFFF;border:none;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:background .15s,transform .1s;white-space:nowrap;}
+.ebtn{background:#111111;color:#FFFFFF;border:none;border-radius:10px;padding:0 18px;height:54px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:background .15s,transform .1s;white-space:nowrap;}
 .ebtn:hover{background:#333333;}
 .ebtn:active{transform:scale(.97);}
-.enote{width:100%;margin-top:9px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px 13px;color:var(--text2);font-size:13px;outline:none;font-family:var(--sans);resize:none;}
+.enote{width:100%;margin-top:9px;background:#FFFFFF;border:1px solid rgba(0,0,0,0.1);border-radius:8px;padding:8px 13px;color:var(--text2);font-size:13px;outline:none;font-family:var(--sans);resize:none;}
 .enote::placeholder{color:var(--text3);}
 .esaved{display:flex;align-items:center;justify-content:space-between;}
 .esaved-val{font-family:var(--sans);font-size:26px;color:var(--a);font-weight:300;}
@@ -180,8 +181,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .cal-cell.today .cal-d{color:var(--user-color, #111);font-weight:600;}
 .cal-cell.rec::after{content:'';position:absolute;bottom:3px;width:3px;height:3px;border-radius:50%;background:var(--user-color, #111);}
 .cal-cell.sel{background:var(--adim);outline:1px solid rgba(0,0,0,0.2);}
-.cal-cell.mong{background:rgba(0,0,0,.04);}
-.cal-cell.mong .cal-d{color:var(--user-color, #111);}
+.cal-cell.mong{background:var(--user-color, #111);border-radius:8px;}
+.cal-cell.mong .cal-d{color:#FFFFFF;font-weight:700;}.cal-cell.mong .cal-w{color:rgba(255,255,255,0.8);}
 .cal-d{font-size:12px;color:var(--text2);font-family:var(--mono);line-height:1;}
 .cal-w{font-size:9px;color:var(--user-color, #111);font-family:var(--mono);}
 .cal-cell.other .cal-d{color:var(--text3);}
@@ -248,8 +249,8 @@ canvas#wChart{width:100%!important;height:160px!important;}
 .prof-photo-placeholder{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;border:2px dashed var(--border2);}
 .prof-photo-placeholder.A{background:var(--adim);}
 .prof-photo-placeholder.B{background:var(--rdim);}
-.prof-upload-btn{position:absolute;bottom:0;right:0;width:26px;height:26px;border-radius:50%;background:var(--a);border:2px solid var(--bg2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:#0d0d0f;font-weight:700;}
-.prof-upload-btn:hover{background:#333333;}
+.prof-upload-btn{position:absolute;bottom:0;right:0;width:26px;height:26px;border-radius:50%;background:#FFFFFF;border:1.5px solid rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:11px;color:#555555;font-weight:500;}
+.prof-upload-btn:hover{background:#F0F0F0;}
 #photoInput{display:none;}
 .prof-name{font-size:22px;font-weight:500;margin-bottom:3px;font-family:var(--sans);text-align:left;}
 .prof-sub{font-size:13px;color:var(--text2);text-align:left;font-family:var(--sans);}
@@ -280,6 +281,25 @@ canvas#wChart{width:100%!important;height:160px!important;}
 
 /* user select photo */
 .us-photo{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+
+
+/* CHAT */
+.chat-wrap{padding:16px 20px;display:flex;flex-direction:column;height:calc(100vh - 160px);}
+.chat-messages{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding-bottom:16px;}
+.chat-bubble-wrap{display:flex;flex-direction:column;gap:3px;}
+.chat-bubble-wrap.me{align-items:flex-end;}
+.chat-bubble-wrap.other{align-items:flex-start;}
+.chat-name{font-size:11px;color:var(--text3);font-family:var(--sans);padding:0 4px;}
+.chat-bubble{max-width:75%;padding:10px 14px;border-radius:18px;font-size:14px;line-height:1.5;font-family:var(--sans);}
+.chat-bubble.me{background:#111111;color:#FFFFFF;border-bottom-right-radius:4px;}
+.chat-bubble.other{background:#FFFFFF;color:#111111;border:1px solid rgba(0,0,0,0.1);border-bottom-left-radius:4px;}
+.chat-time{font-size:10px;color:var(--text3);padding:0 4px;font-family:var(--sans);}
+.chat-input-row{display:flex;gap:8px;align-items:center;padding-top:12px;border-top:1px solid var(--border);}
+.chat-input{flex:1;background:#FFFFFF;border:1px solid rgba(0,0,0,0.12);border-radius:22px;padding:10px 16px;font-size:14px;outline:none;font-family:var(--sans);color:var(--text);}
+.chat-input::placeholder{color:var(--text3);}
+.chat-send{width:40px;height:40px;border-radius:50%;background:#111111;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.chat-send svg{stroke:#FFFFFF;}
+.chat-empty{text-align:center;color:var(--text3);font-size:13px;padding:40px 0;font-family:var(--sans);}
 
 @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 </style>
@@ -345,6 +365,10 @@ canvas#wChart{width:100%!important;height:160px!important;}
     <div class="nav-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
     <div class="nav-lbl">달력</div>
   </div>
+  <div class="nav-item" onclick="switchTab('chat')">
+    <div class="nav-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+    <div class="nav-lbl">채팅</div>
+  </div>
   <div class="nav-item" onclick="switchTab('prof')">
     <div class="nav-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
     <div class="nav-lbl">프로필</div>
@@ -359,13 +383,13 @@ const HANDCREAM_IMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABKQAAASuCAY
 const USERS = {
   A: { name: '황', emoji: '🍩', avClass: 'us-av-a', color: 'var(--a)', start: 60.1,
     plan: [
-      {date:'2026-04-20',goal:56.5},
-      {date:'2026-04-27',goal:56.0},{date:'2026-05-04',goal:55.5},
-      {date:'2026-05-11',goal:55.0},{date:'2026-05-18',goal:54.5},
-      {date:'2026-05-25',goal:54.0},{date:'2026-06-01',goal:53.5},
-      {date:'2026-06-08',goal:53.0},{date:'2026-06-15',goal:53.0},
-      {date:'2026-06-22',goal:53.0,maintain:true},{date:'2026-06-29',goal:53.0,maintain:true},
-      {date:'2026-07-06',goal:53.0,maintain:true},{date:'2026-07-13',goal:53.0,maintain:true},
+      {date:'2026-04-20',goal:57.0},
+      {date:'2026-04-27',goal:56.5},{date:'2026-05-04',goal:56.0},
+      {date:'2026-05-11',goal:55.5},{date:'2026-05-18',goal:55.0},
+      {date:'2026-05-25',goal:54.5},{date:'2026-06-01',goal:54.0},
+      {date:'2026-06-08',goal:54.0},{date:'2026-06-15',goal:54.0},
+      {date:'2026-06-22',goal:54.0,maintain:true},{date:'2026-06-29',goal:54.0,maintain:true},
+      {date:'2026-07-06',goal:54.0,maintain:true},{date:'2026-07-13',goal:54.0,maintain:true},
     ]
   },
   B: { name: '한', emoji: '🎂', avClass: 'us-av-b', color: 'var(--r)', start: 60.6,
@@ -414,11 +438,11 @@ function currentWeek(u){
 function weekStatus(w, u){
   const now=new Date();now.setHours(0,0,0,0);
   const monDate=keyToDate(w.date);monDate.setHours(0,0,0,0);
-  const deadline=new Date(monDate);deadline.setDate(deadline.getDate()+7);
-  const daysLeft=Math.ceil((deadline-now)/86400000);
+  const daysLeft=Math.ceil((monDate-now)/86400000);
   if(monDate>now) return 'future';
-  if(daysLeft>0){const lw=latestW(u);if(lw!==null&&lw<=w.goal)return 'achieved';return 'active';}
+  if(daysLeft===0||daysLeft>-1){const lw=latestW(u);if(lw!==null&&lw<=w.goal)return 'achieved';return 'active';}
   const ud=userData[u]; if(!ud) return 'failed';
+  const deadline=new Date(monDate);deadline.setDate(deadline.getDate()+1);
   const weekEnd=`${deadline.getFullYear()}-${pad(deadline.getMonth()+1)}-${pad(deadline.getDate())}`;
   const ks=sortedKeys(u).filter(k=>k>=w.date&&k<weekEnd);
   const bestW=ks.length?Math.min(...ks.map(k=>ud.records[k].w)):null;
@@ -467,9 +491,9 @@ function defaultData(uid){
   const u=USERS[uid];
   const penalty='Buly 1803 핸드크림 구매';
   const emoji='🫙';
-  const finalGoal = uid==='A' ? 53.0 : 53.0;
+  const finalGoal = uid==='A' ? 54.0 : 53.0;
   return{
-    records:{[todayKey()]:{w:u.start,note:'시작'}},
+    records:{'2026-04-13':{w:u.start,note:'시작'}},
     weeks:u.plan.map(p=>({date:p.date,goal:p.goal,penalty,emoji,maintain:p.maintain||false})),
     startWeight:u.start,
     finalGoal
@@ -590,7 +614,7 @@ function profHTML(){
       ${photoSection}
       <div class="prof-name">${nickname}</div>
       <div class="prof-sub">시작 ${u.start}kg · 최종 목표 ${finalGoal.toFixed(1)}kg</div>
-      <button onclick="openProfModal()" style="margin-top:12px;background:none;border:1px solid var(--border2);border-radius:8px;padding:6px 16px;color:var(--text2);font-size:12px;cursor:pointer;font-family:var(--mono);transition:border-color .2s,color .2s" onmouseover="this.style.borderColor='var(--a)';this.style.color='var(--a)'" onmouseout="this.style.borderColor='var(--border2)';this.style.color='var(--text2)'">✎ 별명 · 목표 수정</button>
+      <button onclick="openProfModal()" style="margin-top:12px;background:none;border:1px solid var(--border2);border-radius:8px;padding:6px 16px;color:var(--text2);font-size:12px;cursor:pointer;font-family:var(--mono);transition:border-color .2s,color .2s" onmouseover="this.style.borderColor='var(--a)';this.style.color='var(--a)'" onmouseout="this.style.borderColor='var(--border2)';this.style.color='var(--text2)'">별명 · 목표 수정</button>
     </div>
     <div class="prof-stats">
       <div class="prof-stat">
@@ -766,7 +790,7 @@ function headerHTML(){
         <span class="app-name" style="color:var(--text2)">${nickname}</span>
       </div>
       <div class="header-btns">
-        <button class="hbtn" onclick="switchUser()">전환</button>
+        <button class="hbtn" onclick="switchUser()">홈</button>
       </div>
     </div>
     <div class="header-main">
@@ -801,6 +825,7 @@ function contentHTML(){
   if(tab==='vs')    return vsHTML();
   if(tab==='cal')   return calHTML();
   if(tab==='prof')  return profHTML();
+  if(tab==='chat')  return chatHTML();
   return '';
 }
 
@@ -823,6 +848,10 @@ function homeHTML(){
     </div>
     <textarea class="enote" id="todayNote" placeholder="오늘 메모 (선택)" rows="2"></textarea>`;
   }
+  // Check if today is a Monday goal date
+  const monGoalDatesHome=new Set(S().weeks.map(w=>w.date));
+  const isMondayGoal=monGoalDatesHome.has(tk);
+  const measureBanner=isMondayGoal?`<div style="background:var(--user-color,#111);color:#fff;border-radius:14px;padding:14px 18px;margin-bottom:13px;display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;">⚖️ 오늘은 몸무게를 측정하는 날이에요!</div>`:'';
   const penHTML=penaltyCardHTML(currentUser);
   const rivalUID=currentUser==='A'?'B':'A';
   const rivalHTML=rivalCardHTML(rivalUID);
@@ -845,6 +874,7 @@ function homeHTML(){
   }).join('');
   return`<div class="section">
     <div class="slabel">오늘 기록</div>
+    ${measureBanner}
     <div class="entry-card">
       <div class="edate-row"><span class="edate">${dateStr}</span><span class="estatus">${rec?'✓ 기록됨':'미기록'}</span></div>
       ${body}
@@ -900,8 +930,7 @@ function penaltyCardHTML(uid){
   const lw=latestW(uid);
   const now=new Date();now.setHours(0,0,0,0);
   const monDate=keyToDate(cw.date);monDate.setHours(0,0,0,0);
-  const deadline=new Date(monDate);deadline.setDate(deadline.getDate()+7);
-  const daysLeft=Math.ceil((deadline-now)/86400000);
+  const daysLeft=Math.ceil((monDate-now)/86400000);
   let state,cdTxt,barPct,footerTxt,statusNote='';
   if(status==='achieved'&&daysLeft>0){
     state='s';cdTxt='✓ 달성 — 다음 주로 연장';barPct=100;
@@ -914,7 +943,7 @@ function penaltyCardHTML(uid){
   }else{
     state=daysLeft<=2?'d':'s';
     cdTxt=daysLeft===1?'D-1 내일 마감!':`D-${daysLeft}`;
-    barPct=Math.min(95,Math.round((7-daysLeft)/7*100));
+    barPct=Math.min(95,Math.round((7-(daysLeft>0?daysLeft:0))/7*100));
     footerTxt=lw!==null
       ?(cw.maintain?`현재 ${lw.toFixed(1)}kg — ${lw<=cw.goal?'유지 중!':(lw-cw.goal).toFixed(1)+'kg 초과'}`
         :`현재 ${lw.toFixed(1)}kg — ${Math.max(0,lw-cw.goal).toFixed(1)}kg 더 빼면 연장`)
@@ -945,6 +974,10 @@ function penaltyCardHTML(uid){
     <div class="pen-foot">
       <div class="pen-bar-labels"><span>${footerTxt}</span><span>${barPct}%</span></div>
       <div class="pen-bar"><div class="pen-bar-fill ${state}" style="width:${barPct}%"></div></div>
+      ${(status==='failed'||daysLeft<=0)
+        ? `<div onclick="window.open('https://kko.to/X2Co1MkbLR','_blank')" style="margin-top:12px;background:#FEE500;border-radius:10px;padding:12px 16px;text-align:center;cursor:pointer;font-size:13px;font-weight:700;color:#191919;font-family:var(--sans);">카카오톡 선물하기</div>`
+        : `<div style="margin-top:12px;background:#F0F0F0;border-radius:10px;padding:12px 16px;text-align:center;cursor:not-allowed;font-size:13px;font-weight:700;color:#AAAAAA;font-family:var(--sans);opacity:0.6;">카카오톡 선물하기</div>`
+      }
     </div>
   </div>`;
 }
@@ -1032,7 +1065,7 @@ function calHTML(){
     const dStr=`${sm}월 ${sd}일 (${dayN[new Date(sy,sm-1,sd).getDay()]})`;
     const isPast=new Date(sy,sm-1,sd)<=new Date(new Date().setHours(0,0,0,0));
     const mg=S().weeks.find(w=>w.date===selDate);
-    const gNote=mg?`<div style="font-size:11px;color:var(--a);margin-top:4px;margin-bottom:8px">목표: ${mg.goal.toFixed(1)}kg · 벌칙: ${mg.penalty}</div>`:'';
+    const gNote=mg?`<div style="background:var(--user-color,#111);color:#fff;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:12px;font-weight:600;text-align:center;">⚖️ 몸무게를 측정하는 날이에요!</div><div style="font-size:11px;color:var(--text2);margin-bottom:8px;">목표: ${mg.goal.toFixed(1)}kg · 벌칙: ${mg.penalty}</div>`:'';
     if(rec){
       panel=`<div class="day-panel show"><div class="dp-hdr"><span class="dp-date">${dStr}</span><button class="dp-close" onclick="closePan()">×</button></div>${gNote}<div class="dp-existing"><div><div class="dp-ev">${rec.w.toFixed(1)} kg</div>${rec.note?`<div style="font-size:11px;color:var(--text3)">${rec.note}</div>`:''}</div><button class="dp-del" onclick="delRec('${selDate}')">삭제</button></div></div>`;
     }else if(isPast){
@@ -1070,7 +1103,7 @@ function weeksHTML(){
     let chipC,chipBg,chipTxt;
     if(st==='achieved'){chipC='var(--a)';chipBg='var(--adim)';chipTxt='✓ 달성 → 연장';}
     else if(st==='failed'){chipC='var(--r)';chipBg='var(--rdim)';chipTxt='✗ 미달성 · 발동';}
-    else if(st==='active'){const dl=Math.ceil((new Date(keyToDate(w.date).getTime()+7*86400000)-new Date().setHours(0,0,0,0))/86400000);chipC='var(--a)';chipBg='var(--adim)';chipTxt=`진행중 D-${dl}`;}
+    else if(st==='active'){const dl=Math.ceil((keyToDate(w.date).setHours(0,0,0,0)-new Date().setHours(0,0,0,0))/86400000);chipC='var(--a)';chipBg='var(--adim)';chipTxt=`진행중 D-${dl}`;}
     else{chipC='var(--text3)';chipBg='var(--bg3)';chipTxt='예정';}
     return`<div class="wli">
       <div class="wli-top">
@@ -1122,12 +1155,17 @@ async function deleteWeek(idx){if(!confirm('삭제할까요?'))return;S().weeks.
 // ── NAV ──
 function updateNav(){
   document.querySelectorAll('.nav-item').forEach((el,i)=>{
-    el.className='nav-item'+((['home','vs','cal','prof'][i]===tab)?' on':'');
+    el.className='nav-item'+((['home','vs','cal','chat','prof'][i]===tab)?' on':'');
   });
 }
 function switchTab(t){tab=t;updateNav();render();}
 
 function postRender(){
+  const ci=document.getElementById('chatInput');
+  if(ci){ci.addEventListener('keydown',e=>{if(e.key==='Enter')sendChat();});
+    // Scroll to bottom
+    setTimeout(()=>{const el=document.getElementById('chatMessages');if(el)el.scrollTop=el.scrollHeight;},50);
+  }
   updateNav();
   const tw=document.getElementById('todayW');
   if(tw) tw.addEventListener('keydown',e=>{if(e.key==='Enter')saveToday();});
@@ -1137,6 +1175,69 @@ function postRender(){
     if(el) el.addEventListener('input', updatePlanPreview);
   });
 }
+
+
+// ── CHAT ──
+function loadMessages(){
+  try{return JSON.parse(localStorage.getItem('nmp_chat')||'[]');}
+  catch{return [];}
+}
+function saveMessages(msgs){
+  localStorage.setItem('nmp_chat', JSON.stringify(msgs));
+}
+
+function chatHTML(){
+  const msgs = loadMessages();
+  const me = currentUser;
+  const meUser = USERS[me];
+  const otherUID = me==='A'?'B':'A';
+  const otherUser = USERS[otherUID];
+
+  const msgsHTML = msgs.length===0
+    ? '<div class="chat-empty">아직 메시지가 없어요<br>첫 메시지를 보내보세요 💬</div>'
+    : msgs.map(m=>{
+        const isMe = m.uid===me;
+        const u = USERS[m.uid];
+        const nick = userData[m.uid]?.nickname || u.name;
+        const time = new Date(m.ts).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
+        return `<div class="chat-bubble-wrap ${isMe?'me':'other'}">
+          ${!isMe?`<div class="chat-name">${nick}</div>`:''}
+          <div class="chat-bubble ${isMe?'me':'other'}">${m.text}</div>
+          <div class="chat-time">${time}</div>
+        </div>`;
+      }).join('');
+
+  return `<div class="chat-wrap">
+    <div class="chat-messages" id="chatMessages">${msgsHTML}</div>
+    <div class="chat-input-row">
+      <input type="text" class="chat-input" id="chatInput" placeholder="메시지를 입력하세요..." maxlength="200">
+      <button class="chat-send" onclick="sendChat()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>`;
+}
+
+function sendChat(){
+  const input = document.getElementById('chatInput');
+  const text = (input?.value||'').trim();
+  if(!text) return;
+  const msgs = loadMessages();
+  msgs.push({uid:currentUser, text, ts:Date.now()});
+  saveMessages(msgs);
+  input.value='';
+  render();
+  // Scroll to bottom
+  setTimeout(()=>{
+    const el=document.getElementById('chatMessages');
+    if(el) el.scrollTop=el.scrollHeight;
+  },50);
+}
+
+// Auto-reload chat every 3 seconds
+setInterval(()=>{
+  if(tab==='chat') render();
+},3000);
 
 // ── INIT ──
 async function init(){
