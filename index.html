@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -465,20 +466,26 @@ function sortedKeys(u){return Object.keys(userData[u]?.records||{}).sort();}
 function latestW(u){const ks=sortedKeys(u);return ks.length?userData[u].records[ks[ks.length-1]].w:null;}
 
 function currentWeek(u){
-  const ud=userData[u]; if(!ud) return null;
+  const ud=userData[u];
   const now=new Date();
-  // After Monday 2PM, show next week's goal
   const isMonday=now.getDay()===1;
   const isPastCutoff=isMonday&&now.getHours()>=14;
-  const sorted=[...ud.weeks].sort((a,b)=>a.date.localeCompare(b.date));
+  const today=new Date();today.setHours(0,0,0,0);
+
+  // Use userData weeks if available, otherwise fall back to USERS plan
+  const penalty='Buly 1803 핸드크림 구매';
+  const emoji='🫙';
+  const weeks = (ud&&ud.weeks&&ud.weeks.length>0)
+    ? ud.weeks
+    : USERS[u].plan.map(p=>({date:p.date,goal:p.goal,penalty,emoji,maintain:p.maintain||false}));
+
+  const sorted=[...weeks].sort((a,b)=>a.date.localeCompare(b.date));
   let best=null;
   for(let i=0;i<sorted.length;i++){
     const w=sorted[i];
     const d=keyToDate(w.date);
     d.setHours(0,0,0,0);
-    const today=new Date();today.setHours(0,0,0,0);
     if(d<=today){
-      // If today is Monday past 2PM, use next week's goal
       if(isPastCutoff&&d.getTime()===today.getTime()){
         best=sorted[i+1]||w;
       } else {
@@ -711,7 +718,7 @@ function profHTML(){
 
     <div class="prof-section" style="margin-top:20px">
       <div class="prof-sec-label" style="display:flex;justify-content:space-between;align-items:center">
-        <span>주차별 기록</span>
+        <span>주차별 목표 설정</span>
         <button onclick="switchTab('weeks')" style="background:none;border:none;color:var(--a);font-size:12px;cursor:pointer;font-family:var(--mono)">+ 추가 →</button>
       </div>
       <div class="prof-info-card">
@@ -836,7 +843,7 @@ async function selectUser(uid){
 function headerHTML(){
   const u=USERS[currentUser];
   const nickname = S()?.nickname || u.name;
-  const lw=latestW(currentUser);
+  const lw=latestW(currentUser)??USERS[currentUser].start;
   const ks=sortedKeys(currentUser);
   const prev=ks.length>1?S().records[ks[ks.length-2]].w:null;
   const diff=(lw!==null&&prev!==null)?lw-prev:null;
@@ -866,8 +873,8 @@ function headerHTML(){
         </div>
       </div>
       <div class="hright">
-        <div class="tlabel">${cw?(cw.maintain?'유지 목표':fmtKey(cw.date)+' 목표'):'월요일 목표'}</div>
-        <div class="tnum">${cw?cw.goal.toFixed(1)+' kg':'--'}</div>
+        <div class="tlabel">${cw?(cw.maintain?'유지 목표':fmtKey(cw.date)+' 목표'):fmtKey(USERS[currentUser].plan[0].date)+' 목표'}</div>
+        <div class="tnum">${cw?cw.goal.toFixed(1)+' kg':USERS[currentUser].plan[0].goal.toFixed(1)+' kg'}</div>
         <div class="tremain">${
           !cw?'':
           cw.maintain&&remaining!==null&&remaining<=0?'✓ 유지 중!':
@@ -1048,7 +1055,7 @@ function penaltyCardHTML(uid){
       <div class="pen-bar-labels"><span>${footerTxt}</span><span>${barPct}%</span></div>
       <div class="pen-bar"><div class="pen-bar-fill ${state}" style="width:${barPct}%"></div></div>
       ${(()=>{
-        const lw=latestW(currentUser);
+        const lw=latestW(currentUser)??USERS[currentUser].start;
         const hasRecord = lw!==null;
         const failedGoal = hasRecord && cw && lw>cw.goal && daysLeft<=0;
         if(failedGoal){
@@ -1378,11 +1385,12 @@ async function init(){
     location.href=location.pathname;
     return;
   }
-  // Version check - if plan version mismatch, reset weeks only
-  const planVersion='2026-04-17-v4';
+  // Always reset user data to get fresh plan
+  const planVersion='2026-04-17-v5';
   if(localStorage.getItem('nmp_plan_version')!==planVersion){
     localStorage.removeItem('diet_user_A');
     localStorage.removeItem('diet_user_B');
+    localStorage.removeItem('nmp_chat');
     localStorage.setItem('nmp_plan_version', planVersion);
   }
   await initStorage();
