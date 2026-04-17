@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -580,7 +579,7 @@ function userSelectHTML(){
       
       <div class="us-cards">
         ${Object.entries(USERS).map(([uid,u])=>{
-          const nick = userData[uid]?.nickname || u.name;
+          const nick = u.name;
           const fg = userData[uid]?.finalGoal || u.plan[5].goal;
           return`
           <div class="us-card" onclick="selectUser('${uid}')">
