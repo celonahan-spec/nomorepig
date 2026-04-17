@@ -1373,6 +1373,19 @@ function savePenSetting(){
 
 // ── INIT ──
 async function init(){
+  // Auto clear if ?reset=1 in URL
+  if(location.search.includes('reset=1')){
+    localStorage.clear();
+    location.href=location.pathname;
+    return;
+  }
+  // Version check - if plan version mismatch, reset weeks only
+  const planVersion='2026-04-17-v2';
+  if(localStorage.getItem('nmp_plan_version')!==planVersion){
+    localStorage.removeItem('diet_user_A');
+    localStorage.removeItem('diet_user_B');
+    localStorage.setItem('nmp_plan_version', planVersion);
+  }
   await initStorage();
   document.getElementById('loading').style.display='none';
   document.getElementById('app').style.display='block';
