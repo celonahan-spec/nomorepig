@@ -675,7 +675,7 @@ function profHTML(){
       <div class="prof-sec-label">현황</div>
       <div class="prof-info-card">
         <div class="prof-info-row"><span class="prof-info-lbl">현재 체중</span><span class="prof-info-val">${lw!==null?lw.toFixed(1)+' kg':'--'}</span></div>
-        <div class="prof-info-row"><span class="prof-info-lbl">이번 주 목표</span><span class="prof-info-val">${cw?cw.goal.toFixed(1)+' kg':'--'}</span></div>
+        <div class="prof-info-row"><span class="prof-info-lbl">이번 월요일 목표</span><span class="prof-info-val">${cw?cw.goal.toFixed(1)+' kg':'--'}</span></div>
         <div class="prof-info-row"><span class="prof-info-lbl">이번 주 남은 감량</span><span class="prof-info-val ${remaining!==null&&remaining<=0?'g':''}">${remaining!==null?(remaining<=0?'✓ 달성!':remaining.toFixed(1)+' kg'):'--'}</span></div>
         <div class="prof-info-row"><span class="prof-info-lbl">최종 목표까지</span><span class="prof-info-val ${toFinal!==null&&toFinal<=0?'g':''}">${toFinal!==null?(toFinal<=0?'🎉 달성!':toFinal.toFixed(1)+' kg'):'--'}</span></div>
       </div>
@@ -842,7 +842,7 @@ function headerHTML(){
         </div>
       </div>
       <div class="hright">
-        <div class="tlabel">${cw&&cw.maintain?'유지 목표':'이번 주 목표'}</div>
+        <div class="tlabel">${cw&&cw.maintain?'유지 목표':'이번 월요일 목표'}</div>
         <div class="tnum">${cw?cw.goal.toFixed(1)+' kg':'--'}</div>
         <div class="tremain">${
           !cw?'주차 목표를 설정하세요':
@@ -952,7 +952,7 @@ function rivalCardHTML(uid){
     </div>
     <div class="rival-body">
       <div class="rival-row"><span class="rival-lbl">현재 체중</span><span class="rival-val">${lw!==null?lw.toFixed(1)+' kg':'--'}</span></div>
-      <div class="rival-row"><span class="rival-lbl">이번 주 목표</span><span class="rival-val">${cw?cw.goal.toFixed(1)+' kg':'--'}</span></div>
+      <div class="rival-row"><span class="rival-lbl">이번 월요일 목표</span><span class="rival-val">${cw?cw.goal.toFixed(1)+' kg':'--'}</span></div>
       <div class="rival-row"><span class="rival-lbl">남은 감량</span><span class="rival-val ${remaining!==null&&remaining<=0?'good':'bad'}">${remaining!==null?(remaining<=0?'✓ 달성!':remaining.toFixed(1)+'kg'):'--'}</span></div>
       <div class="rival-prog">
         <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text3);font-family:var(--mono);margin-bottom:4px"><span>목표 달성률</span><span>${pct}%</span></div>
@@ -974,7 +974,7 @@ function penImgHTML(){
 
 function penaltyCardHTML(uid){
   const info=activePenaltyInfo(uid);
-  if(!info) return`<button class="add-week-btn" onclick="openWeekModal(null)">+ 이번 주 목표 추가</button>`;
+  if(!info) return`<button class="add-week-btn" onclick="openWeekModal(null)">+ 이번 월요일 목표 추가</button>`;
   const{week:cw,originWeek,rollCount,status}=info;
   const lw=latestW(uid);
   const now=new Date();now.setHours(0,0,0,0);
@@ -983,7 +983,7 @@ function penaltyCardHTML(uid){
   let state,cdTxt,barPct,footerTxt,statusNote='';
   if(status==='achieved'&&daysLeft>0){
     state='s';cdTxt='✓ 달성 — 다음 주로 연장';barPct=100;
-    footerTxt='이번 주 목표 달성! 벌칙은 다음 주로';
+    footerTxt='이번 월요일 목표 달성! 벌칙은 다음 주로';
     if(rollCount>0)statusNote=`<div class="pen-roll s">🔄 ${rollCount}주째 연장 중</div>`;
   }else if(status==='failed'||daysLeft<=0){
     state='d';cdTxt='💸 마감 — 벌칙 발동!';barPct=100;
