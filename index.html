@@ -42,25 +42,25 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .us-detail{font-size:12px;color:var(--text2);font-family:var(--sans);}
 
 /* HEADER */
-.header{padding:20px 20px 14px;border-bottom:1px solid var(--border);background:var(--bg);position:sticky;top:0;z-index:100;}
+.header{padding:20px 20px 14px;border-bottom:none;background:var(--bg);position:sticky;top:0;z-index:100;}
 .header-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
-.app-name{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:.16em;text-transform:uppercase;}
+.app-name{font-family:var(--mono);font-size:12px;color:var(--text3);letter-spacing:.16em;text-transform:uppercase;}
 .header-btns{display:flex;gap:8px;}
-.hbtn{background:none;border:1px solid var(--border2);border-radius:8px;padding:5px 11px;color:var(--text2);font-size:11px;cursor:pointer;font-family:var(--mono);transition:border-color .2s,color .2s;}
+.hbtn{background:none;border:1px solid var(--border2);border-radius:8px;padding:5px 11px;color:var(--text2);font-size:12px;cursor:pointer;font-family:var(--mono);transition:border-color .2s,color .2s;}
 .hbtn:hover{border-color:var(--a);color:var(--a);}
 .hbtn.danger:hover{border-color:var(--r);color:var(--r);}
 .header-main{display:flex;align-items:flex-end;justify-content:space-between;}
-.wbadge{display:inline-flex;align-items:center;gap:3px;font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:20px;margin-bottom:5px;}
+.wbadge{display:inline-flex;align-items:center;gap:3px;font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:20px;margin-bottom:5px;}
 .bd{background:var(--adim);color:var(--a);}
 .bu{background:var(--rdim);color:var(--r);}
 .wnum{font-family:var(--sans);font-size:52px;line-height:1;color:var(--text);font-weight:300;letter-spacing:-0.02em;}
 .wkg{font-size:18px;color:var(--text2);font-family:var(--sans);font-weight:300;}
 .hright{text-align:right;}
-.tlabel{font-size:10px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;}
+.tlabel{font-size:12px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;}
 .tnum{font-family:var(--sans);font-size:20px;color:#111111;font-weight:400;}
-.tremain{font-size:11px;color:var(--text3);margin-top:2px;font-family:var(--sans);}
-.prog-strip{height:3px;background:var(--bg3);margin-top:12px;border-radius:2px;overflow:hidden;}
-.prog-fill{height:100%;background:#111111;border-radius:2px;transition:width .7s cubic-bezier(.4,0,.2,1);}
+.tremain{font-size:12px;color:var(--text3);margin-top:2px;font-family:var(--sans);}
+.prog-strip{height:6px;background:var(--bg3);margin-top:12px;border-radius:999px;overflow:hidden;}
+.prog-fill{height:100%;background:#191919;border-radius:999px;transition:width .7s cubic-bezier(.4,0,.2,1);}
 
 /* MODAL */
 .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto;}
@@ -69,7 +69,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 @keyframes slideUp{from{transform:translateY(14px);opacity:0;}to{transform:none;opacity:1;}}
 .modal-title{font-size:15px;font-weight:500;margin-bottom:16px;}
 .field{margin-bottom:12px;}
-.fl{font-size:11px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;display:block;}
+.fl{font-size:12px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;display:block;}
 .fw{position:relative;}
 .fi{width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:10px 38px 10px 13px;color:var(--text);font-family:var(--mono);font-size:18px;outline:none;transition:border-color .2s;-moz-appearance:textfield;}
 .fi::-webkit-outer-spin-button,.fi::-webkit-inner-spin-button{-webkit-appearance:none;}
@@ -84,17 +84,17 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .btn-c{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:11px;color:var(--text2);cursor:pointer;font-size:14px;font-family:var(--sans);}
 .btn-s{flex:2;background:#111111;border:none;border-radius:10px;padding:11px;color:#FFFFFF;font-weight:600;cursor:pointer;font-size:14px;font-family:var(--sans);transition:background .15s;}
 .btn-s:hover{background:#333333;}
-.msec{font-size:10px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin:16px 0 9px;}
+.msec{font-size:12px;font-family:var(--mono);color:var(--text3);text-transform:uppercase;letter-spacing:.12em;margin:16px 0 9px;}
 
 /* SECTION */
 .section{padding:18px 20px 0;}
-.slabel{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;font-family:var(--sans);font-weight:500;}
+.slabel{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;font-family:var(--sans);font-weight:500;}
 
 /* ENTRY */
 .entry-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:16px;}
 .edate-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px;}
 .edate{font-size:13px;color:var(--text2);font-family:var(--sans);}
-.estatus{font-family:var(--sans);font-size:11px;color:var(--text3);}
+.estatus{font-family:var(--sans);font-size:12px;color:var(--text3);}
 .einput-row{display:flex;gap:10px;align-items:center;}
 .ewrap{position:relative;flex:1;}
 .einput{width:100%;background:#FFFFFF;border:1px solid rgba(0,0,0,0.12);border-radius:10px;padding:0 42px 0 15px;height:54px;color:var(--text);font-family:var(--sans);font-size:22px;font-weight:300;outline:none;transition:border-color .2s;-moz-appearance:textfield;}
@@ -108,42 +108,42 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .enote::placeholder{color:var(--text3);}
 .esaved{display:flex;align-items:center;justify-content:space-between;}
 .esaved-val{font-family:var(--sans);font-size:26px;color:var(--a);font-weight:300;}
-.esaved-note{font-size:11px;color:var(--text3);margin-top:3px;}
-.eedit{background:none;border:1px solid var(--border2);border-radius:7px;padding:6px 12px;color:var(--text3);font-size:11px;cursor:pointer;font-family:var(--mono);}
+.esaved-note{font-size:12px;color:var(--text3);margin-top:3px;}
+.eedit{background:none;border:1px solid var(--border2);border-radius:7px;padding:6px 12px;color:var(--text3);font-size:12px;cursor:pointer;font-family:var(--mono);}
 
 /* PENALTY */
 .pen-card{border-radius:16px;overflow:hidden;margin-top:13px;}
 .pen-card.s{background:var(--bg2);border:1px solid rgba(0,0,0,0.2);}
 .pen-card.d{background:#FFFFFF;border:1px solid rgba(204,34,0,0.3);}
 .pen-top{display:flex;align-items:center;justify-content:space-between;padding:12px 15px;border-bottom:1px solid var(--border);}
-.pen-lbl{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;}
+.pen-lbl{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
 .pen-lbl.s{color:var(--a);}
 .pen-lbl.d{color:var(--r);}
-.pen-cd{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:20px;}
+.pen-cd{font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:20px;}
 .pen-cd.s{background:var(--adim);color:var(--a);}
 .pen-cd.d{background:var(--rdim);color:var(--r);}
 .pen-body{display:flex;align-items:center;gap:13px;padding:13px 15px;}
-.pen-img{width:136px;height:176px;border-radius:24px;object-fit:contain;background:#f0ede8;flex-shrink:0;padding:6px;}
+.pen-img{width:136px;height:176px;border-radius:0px;object-fit:contain;background:#f0ede8;flex-shrink:0;padding:6px;}
 .pen-info{}
-.pen-name{font-family:var(--mono);font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;}
+.pen-name{font-family:var(--mono);font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;}
 .pen-item{font-size:14px;color:var(--text);font-weight:500;font-family:var(--sans);}
-.pen-origin{font-size:11px;color:var(--text3);margin-top:3px;font-family:var(--sans);}
-.pen-roll{display:inline-block;margin-top:5px;font-size:10px;padding:2px 8px;border-radius:10px;font-family:var(--mono);}
+.pen-origin{font-size:12px;color:var(--text3);margin-top:3px;font-family:var(--sans);}
+.pen-roll{display:inline-block;margin-top:5px;font-size:12px;padding:2px 8px;border-radius:10px;font-family:var(--mono);}
 .pen-roll.s{background:var(--adim);color:var(--a);}
 .pen-roll.d{background:var(--rdim);color:var(--r);}
 .pen-foot{padding:0 15px 13px;}
-.pen-bar-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--text3);font-family:var(--mono);margin-bottom:5px;}
-.pen-bar{height:3px;background:var(--bg3);border-radius:2px;overflow:hidden;}
-.pen-bar-fill{height:100%;border-radius:2px;transition:width .7s ease;}
-.pen-bar-fill.s{background:#111111;}
-.pen-bar-fill.d{background:#CC2200;}
+.pen-bar-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--text3);font-family:var(--mono);margin-bottom:5px;}
+.pen-bar{height:6px;background:var(--bg3);border-radius:999px;overflow:hidden;}
+.pen-bar-fill{height:100%;border-radius:999px;transition:width .7s ease;}
+.pen-bar-fill.s{background:#191919;}
+.pen-bar-fill.d{background:#191919;}
 
 /* RIVAL CARD */
 .rival-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:0;}
 .rival-header{display:flex;align-items:center;gap:10px;padding:13px 15px;border-bottom:1px solid var(--border);}
 .rival-avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
 .rival-name{font-size:13px;font-weight:500;font-family:var(--sans);}
-.rival-updated{font-size:10px;color:var(--text3);font-family:var(--mono);margin-left:auto;}
+.rival-updated{font-size:12px;color:var(--text3);font-family:var(--mono);margin-left:auto;}
 .rival-body{padding:13px 15px;}
 .rival-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
 .rival-row:last-child{margin-bottom:0;}
@@ -163,9 +163,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .hdot{width:7px;height:7px;border-radius:50%;background:var(--border2);flex-shrink:0;}
 .hdot.hi{background:var(--a);}
 .hdate{font-size:13px;color:var(--text2);font-family:var(--sans);}
-.hnote{font-size:11px;color:var(--text3);margin-top:1px;font-family:var(--sans);}
+.hnote{font-size:12px;color:var(--text3);margin-top:1px;font-family:var(--sans);}
 .hw{font-family:var(--sans);font-size:15px;color:var(--text);font-weight:500;}
-.hd{font-family:var(--mono);font-size:11px;}
+.hd{font-family:var(--mono);font-size:12px;}
 .hd.dn{color:var(--a);}
 .hd.up{color:var(--r);}
 
@@ -175,7 +175,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .cal-nb{background:none;border:none;color:var(--text2);cursor:pointer;font-size:18px;padding:4px 8px;}
 .cal-month{font-family:var(--mono);font-size:13px;color:var(--text);}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);padding:0 9px 13px;gap:3px;}
-.cal-dow{font-family:var(--mono);font-size:9px;color:var(--text3);text-align:center;padding:4px 0 7px;}
+.cal-dow{font-family:var(--mono);font-size:12px;color:var(--text3);text-align:center;padding:4px 0 7px;}
 .cal-cell{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:7px;cursor:pointer;transition:background .15s;position:relative;gap:1px;}
 .cal-cell:hover{background:var(--bg3);}
 .cal-cell.today .cal-d{color:var(--user-color, #111);font-weight:600;}
@@ -184,7 +184,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .cal-cell.mong{background:var(--user-color, #111);border-radius:8px;}
 .cal-cell.mong .cal-d{color:#FFFFFF;font-weight:700;}.cal-cell.mong .cal-w{color:rgba(255,255,255,0.8);}
 .cal-d{font-size:12px;color:var(--text2);font-family:var(--mono);line-height:1;}
-.cal-w{font-size:9px;color:var(--user-color, #111);font-family:var(--mono);}
+.cal-w{font-size:12px;color:var(--user-color, #111);font-family:var(--mono);}
 .cal-cell.other .cal-d{color:var(--text3);}
 .day-panel{margin:0 9px 11px;background:var(--bg3);border-radius:10px;padding:13px;display:none;}
 .day-panel.show{display:block;animation:fadeIn .2s ease;}
@@ -202,7 +202,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .dp-note::placeholder{color:var(--text3);}
 .dp-existing{display:flex;justify-content:space-between;align-items:center;}
 .dp-ev{font-family:var(--mono);font-size:20px;color:var(--text);}
-.dp-del{background:none;border:1px solid var(--border2);border-radius:6px;padding:5px 11px;color:var(--text3);font-size:11px;cursor:pointer;font-family:var(--mono);}
+.dp-del{background:none;border:1px solid var(--border2);border-radius:6px;padding:5px 11px;color:var(--text3);font-size:12px;cursor:pointer;font-family:var(--mono);}
 .dp-del:hover{color:var(--r);border-color:var(--r);}
 
 /* GRAPH */
@@ -212,7 +212,7 @@ canvas#wChart{width:100%!important;height:160px!important;}
 /* WEEKS */
 .wli{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:13px 15px;margin-bottom:9px;}
 .wli-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;}
-.wli-label{font-family:var(--mono);font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;}
+.wli-label{font-family:var(--mono);font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;}
 .wli-del{background:none;border:none;color:var(--text3);cursor:pointer;font-size:16px;}
 .wli-del:hover{color:var(--r);}
 .wli-chips{display:flex;gap:7px;flex-wrap:wrap;}
@@ -223,11 +223,24 @@ canvas#wChart{width:100%!important;height:160px!important;}
 .add-week-btn:hover{border-color:var(--a);color:var(--a);}
 
 /* NAV */
-.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#FFFFFF;border-top:1px solid rgba(0,0,0,0.1);display:flex;padding:10px 0 22px;}
+.bottom-nav{
+  position:fixed;bottom:16px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 48px);max-width:400px;
+  background:rgba(255,255,255,0.55);
+  backdrop-filter:blur(20px) saturate(1.8);
+  -webkit-backdrop-filter:blur(20px) saturate(1.8);
+  border:1px solid rgba(255,255,255,0.7);
+  border-radius:40px;
+  display:flex;padding:10px 0 10px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.10),0 1.5px 0 rgba(255,255,255,0.8) inset;
+}
 .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:4px;}
 .nav-ico{display:flex;align-items:center;justify-content:center;width:24px;height:24px;}
-.nav-lbl{font-size:10px;color:var(--text3);font-family:var(--sans);font-weight:500;transition:color .15s;}
-.nav-item.on .nav-lbl{color:#111111;}.nav-item.on .nav-ico svg{stroke:#111111;}.nav-item .nav-ico svg{stroke:#AAAAAA;}
+.nav-lbl{font-size:12px;color:var(--text3);font-family:var(--sans);font-weight:500;transition:color .15s;}
+.nav-item.on .nav-lbl{color:#111111;font-weight:600;}
+.nav-item.on .nav-ico svg{stroke:#111111;}
+.nav-item .nav-ico svg{stroke:#AAAAAA;}
+.nav-item.on{background:rgba(0,0,0,0.07);margin:0 4px;border-radius:24px;}
 
 /* COMPARE */
 .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
@@ -236,7 +249,7 @@ canvas#wChart{width:100%!important;height:160px!important;}
 .cmp-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;}
 .cmp-n{font-size:13px;font-weight:500;}
 .cmp-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;}
-.cmp-lbl{font-size:11px;color:var(--text3);}
+.cmp-lbl{font-size:12px;color:var(--text3);}
 .cmp-val{font-family:var(--mono);font-size:13px;color:var(--text);}
 .cmp-val.g{color:var(--a);}
 .cmp-val.r{color:var(--r);}
@@ -249,7 +262,7 @@ canvas#wChart{width:100%!important;height:160px!important;}
 .prof-photo-placeholder{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;border:2px dashed var(--border2);}
 .prof-photo-placeholder.A{background:var(--adim);}
 .prof-photo-placeholder.B{background:var(--rdim);}
-.prof-upload-btn{position:absolute;bottom:0;right:0;width:26px;height:26px;border-radius:50%;background:#FFFFFF;border:1.5px solid rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:11px;color:#555555;font-weight:500;}
+.prof-upload-btn{position:absolute;bottom:0;right:0;width:28px;height:28px;border-radius:50%;background:#FFFFFF;border:1.5px solid rgba(0,0,0,0.15);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#555555;font-weight:400;line-height:1;}
 .prof-upload-btn:hover{background:#F0F0F0;}
 #photoInput{display:none;}
 .prof-name{font-size:22px;font-weight:500;margin-bottom:3px;font-family:var(--sans);text-align:left;}
@@ -259,9 +272,9 @@ canvas#wChart{width:100%!important;height:160px!important;}
 .prof-stat-val{font-family:var(--mono);font-size:18px;font-weight:500;color:var(--text);}
 .prof-stat-val.g{color:var(--a);}
 .prof-stat-val.r{color:var(--r);}
-.prof-stat-lbl{font-size:10px;color:var(--text3);margin-top:3px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;}
+.prof-stat-lbl{font-size:12px;color:var(--text3);margin-top:3px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em;}
 .prof-section{padding:20px 20px 0;}
-.prof-sec-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;font-family:var(--mono);}
+.prof-sec-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;font-family:var(--mono);}
 .prof-info-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
 .prof-info-row{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-bottom:1px solid var(--border);}
 .prof-info-row:last-child{border-bottom:none;}
@@ -272,7 +285,7 @@ canvas#wChart{width:100%!important;height:160px!important;}
 .prof-week-item:last-child{border-bottom:none;}
 .prof-week-date{font-size:12px;color:var(--text2);}
 .prof-week-chips{display:flex;gap:6px;align-items:center;margin-top:3px;flex-wrap:wrap;}
-.prof-week-chip{font-size:10px;padding:2px 7px;border-radius:8px;font-family:var(--mono);}
+.prof-week-chip{font-size:12px;padding:2px 7px;border-radius:8px;font-family:var(--mono);}
 .prof-week-chip.ach{background:var(--adim);color:var(--a);}
 .prof-week-chip.fail{background:var(--rdim);color:var(--r);}
 .prof-week-chip.act{background:var(--bg3);color:var(--text2);}
@@ -289,11 +302,11 @@ canvas#wChart{width:100%!important;height:160px!important;}
 .chat-bubble-wrap{display:flex;flex-direction:column;gap:3px;}
 .chat-bubble-wrap.me{align-items:flex-end;}
 .chat-bubble-wrap.other{align-items:flex-start;}
-.chat-name{font-size:11px;color:var(--text3);font-family:var(--sans);padding:0 4px;}
+.chat-name{font-size:12px;color:var(--text3);font-family:var(--sans);padding:0 4px;}
 .chat-bubble{max-width:75%;padding:10px 14px;border-radius:18px;font-size:14px;line-height:1.5;font-family:var(--sans);}
 .chat-bubble.me{background:#111111;color:#FFFFFF;border-bottom-right-radius:4px;}
 .chat-bubble.other{background:#FFFFFF;color:#111111;border:1px solid rgba(0,0,0,0.1);border-bottom-left-radius:4px;}
-.chat-time{font-size:10px;color:var(--text3);padding:0 4px;font-family:var(--sans);}
+.chat-time{font-size:12px;color:var(--text3);padding:0 4px;font-family:var(--sans);}
 .chat-input-row{display:flex;gap:8px;align-items:center;padding-top:12px;border-top:1px solid var(--border);}
 .chat-input{flex:1;background:#FFFFFF;border:1px solid rgba(0,0,0,0.12);border-radius:22px;padding:10px 16px;font-size:14px;outline:none;font-family:var(--sans);color:var(--text);}
 .chat-input::placeholder{color:var(--text3);}
@@ -305,7 +318,7 @@ canvas#wChart{width:100%!important;height:160px!important;}
 </style>
 </head>
 <body>
-<div id="loading"><div class="spin"></div><div style="font-family:var(--mono);font-size:11px;color:var(--text3)">로딩 중...</div></div>
+<div id="loading"><div class="spin"></div><div style="font-family:var(--mono);font-size:12px;color:var(--text3)">로딩 중...</div></div>
 <div class="app" id="app" style="display:none"></div>
 
 <!-- Profile Edit Modal -->
@@ -325,12 +338,38 @@ canvas#wChart{width:100%!important;height:160px!important;}
       <div class="fw"><input type="number" class="fi" id="profFinalGoal" placeholder="52.6" step="0.1"><span class="fu">kg</span></div>
     </div>
     <div style="background:var(--bg3);border-radius:10px;padding:12px 14px;margin-bottom:4px">
-      <div style="font-size:11px;color:var(--text3);margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em">자동 생성 플랜 미리보기</div>
+      <div style="font-size:12px;color:var(--text3);margin-bottom:8px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em">자동 생성 플랜 미리보기</div>
       <div id="planPreview" style="font-size:12px;color:var(--text2);line-height:1.8"></div>
     </div>
     <div class="modal-btns">
       <button class="btn-c" onclick="closeProfModal()">취소</button>
       <button class="btn-s" onclick="saveProfModal()">저장</button>
+    </div>
+  </div>
+</div>
+
+<!-- Penalty Setting Modal -->
+<div class="modal-bg" id="penSettingBg">
+  <div class="modal">
+    <div class="modal-title">벌칙 상품 설정</div>
+    <div class="field">
+      <label class="fl">상품명</label>
+      <input type="text" class="ft" id="penName" placeholder="예: Buly 1803 핸드크림" maxlength="40" style="font-size:15px;padding:11px 14px">
+    </div>
+    <div class="field">
+      <label class="fl">카카오 선물하기 링크</label>
+      <input type="text" class="ft" id="penLink" placeholder="https://kko.to/..." style="font-size:14px;padding:11px 14px">
+    </div>
+    <div class="field">
+      <label class="fl">상품 이미지 URL (선택)</label>
+      <input type="text" class="ft" id="penImgUrl" placeholder="https://..." style="font-size:14px;padding:11px 14px">
+    </div>
+    <div id="penImgPreview" style="margin-bottom:12px;display:none;">
+      <img id="penImgPreviewImg" style="width:100%;max-height:160px;object-fit:contain;border-radius:10px;background:#f5f5f5;padding:8px;">
+    </div>
+    <div class="modal-btns">
+      <button class="btn-c" onclick="closePenSetting()">취소</button>
+      <button class="btn-s" onclick="savePenSetting()">저장</button>
     </div>
   </div>
 </div>
@@ -381,7 +420,7 @@ const HANDCREAM_IMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABKQAAASuCAY
 
 // ── USERS ──
 const USERS = {
-  A: { name: '황', emoji: '🍩', avClass: 'us-av-a', color: 'var(--a)', start: 60.1,
+  A: { name: 'H.A.R.', emoji: '🍩', avClass: 'us-av-a', color: 'var(--a)', start: 60.1,
     plan: [
       {date:'2026-04-20',goal:57.0},
       {date:'2026-04-27',goal:56.5},{date:'2026-05-04',goal:56.0},
@@ -392,7 +431,7 @@ const USERS = {
       {date:'2026-07-06',goal:54.0,maintain:true},{date:'2026-07-13',goal:54.0,maintain:true},
     ]
   },
-  B: { name: '한', emoji: '🎂', avClass: 'us-av-b', color: 'var(--r)', start: 60.6,
+  B: { name: 'H.S.H.', emoji: '🎂', avClass: 'us-av-b', color: 'var(--r)', start: 60.6,
     plan: [
       {date:'2026-04-20',goal:57.0},
       {date:'2026-04-27',goal:56.5},{date:'2026-05-04',goal:56.0},
@@ -525,16 +564,16 @@ function userSelectHTML(){
   return`<div class="user-select">
     <div class="us-hero">
       <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
-        <div class="us-title" style="margin-bottom:2;">.No More Pig.</div>
+        <div class="us-title" style="margin-bottom:2;">No More Pig.</div>
         <div style="font-size:13px;color:var(--text2);font-family:var(--sans);text-align:center;letter-spacing:0.02em;">너와 나의 비밀 다이어트</div>
         <img src="${HANDCREAM_IMG}" alt="Buly 1803 핸드크림">
         <div style="font-size:13px;color:var(--text2);text-align:center;line-height:1.6;font-family:var(--sans);max-width:260px;">
           "매주 목표를 달성하지 못하면 선물해야 해요"
         </div>
         <div style="display:flex;align-items:center;justify-content:center;background:#FEE500;border-radius:12px;padding:13px 32px;cursor:pointer;margin-top:4px;width:100%;box-sizing:border-box;" onclick="window.open('https://kko.to/X2Co1MkbLR', '_blank')">
-          <span style="font-size:14px;font-weight:700;color:#191919;font-family:var(--sans);">카카오톡 선물하기</span>
+          <span style="font-size:14px;font-weight:700;color:#191919;font-family:var(--sans);">선물 미리보기</span>
         </div>
-        <div style="font-size:11px;color:var(--text3);font-family:var(--sans);">목표 미달성 시 자동 알림</div>
+        
       </div>
     </div>
     <div class="us-bottom">
@@ -548,7 +587,7 @@ function userSelectHTML(){
             ${avatarHTML(uid,48)}
             <div class="us-info">
               <div class="us-name">${nick}</div>
-              <div class="us-detail">시작 ${u.start}kg · 최종 목표 50.0kg</div>
+              
             </div>
             <div style="margin-left:auto;font-size:16px;color:var(--text3);">→</div>
           </div>`;}).join('')}
@@ -614,7 +653,8 @@ function profHTML(){
       ${photoSection}
       <div class="prof-name">${nickname}</div>
       <div class="prof-sub">시작 ${u.start}kg · 최종 목표 ${finalGoal.toFixed(1)}kg</div>
-      <button onclick="openProfModal()" style="margin-top:12px;background:none;border:1px solid var(--border2);border-radius:8px;padding:6px 16px;color:var(--text2);font-size:12px;cursor:pointer;font-family:var(--mono);transition:border-color .2s,color .2s" onmouseover="this.style.borderColor='var(--a)';this.style.color='var(--a)'" onmouseout="this.style.borderColor='var(--border2)';this.style.color='var(--text2)'">별명 · 목표 수정</button>
+      <button onclick="openProfModal()" style="margin-top:12px;background:none;border:1px solid var(--border2);border-radius:8px;padding:6px 16px;color:var(--text2);font-size:12px;cursor:pointer;font-family:var(--mono);transition:border-color .2s,color .2s" onmouseover="this.style.borderColor='var(--a)';this.style.color='var(--a)'" onmouseout="this.style.borderColor='var(--border2)';this.style.color='var(--text2)'">설정</button>
+      <button onclick="openPenSetting()" style="margin-top:8px;background:none;border:1px solid var(--border2);border-radius:8px;padding:6px 16px;color:var(--text2);font-size:12px;cursor:pointer;font-family:var(--mono);transition:border-color .2s,color .2s" onmouseover="this.style.borderColor='var(--a)';this.style.color='var(--a)'" onmouseout="this.style.borderColor='var(--border2)';this.style.color='var(--text2)'">🎁 벌칙 상품 설정</button>
     </div>
     <div class="prof-stats">
       <div class="prof-stat">
@@ -644,7 +684,7 @@ function profHTML(){
     <div class="prof-section" style="margin-top:20px">
       <div class="prof-sec-label">최종 목표 달성률</div>
       <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:16px">
-        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text3);font-family:var(--mono);margin-bottom:8px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text3);font-family:var(--mono);margin-bottom:8px">
           <span>${firstW?firstW.toFixed(1)+'kg':'-'}</span><span>${finalGoal.toFixed(1)}kg</span>
         </div>
         <div style="height:6px;background:var(--bg3);border-radius:3px;overflow:hidden">
@@ -657,7 +697,7 @@ function profHTML(){
     <div class="prof-section" style="margin-top:20px">
       <div class="prof-sec-label" style="display:flex;justify-content:space-between;align-items:center">
         <span>주차별 기록</span>
-        <button onclick="switchTab('weeks')" style="background:none;border:none;color:var(--a);font-size:11px;cursor:pointer;font-family:var(--mono)">+ 추가 →</button>
+        <button onclick="switchTab('weeks')" style="background:none;border:none;color:var(--a);font-size:12px;cursor:pointer;font-family:var(--mono)">+ 추가 →</button>
       </div>
       <div class="prof-info-card">
         ${weeksHTML||'<div style="padding:16px;color:var(--text3);font-size:13px;text-align:center">주차 목표가 없어요</div>'}
@@ -825,7 +865,7 @@ function contentHTML(){
   if(tab==='vs')    return vsHTML();
   if(tab==='cal')   return calHTML();
   if(tab==='prof')  return profHTML();
-  if(tab==='chat')  return chatHTML();
+  if(tab==='chat')  return chatComingSoonHTML();
   return '';
 }
 
@@ -915,14 +955,23 @@ function rivalCardHTML(uid){
       <div class="rival-row"><span class="rival-lbl">이번 주 목표</span><span class="rival-val">${cw?cw.goal.toFixed(1)+' kg':'--'}</span></div>
       <div class="rival-row"><span class="rival-lbl">남은 감량</span><span class="rival-val ${remaining!==null&&remaining<=0?'good':'bad'}">${remaining!==null?(remaining<=0?'✓ 달성!':remaining.toFixed(1)+'kg'):'--'}</span></div>
       <div class="rival-prog">
-        <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);font-family:var(--mono);margin-bottom:4px"><span>목표 달성률</span><span>${pct}%</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text3);font-family:var(--mono);margin-bottom:4px"><span>목표 달성률</span><span>${pct}%</span></div>
         <div class="rival-prog-bar"><div class="rival-prog-fill ${pct>=100?'s':'d'}" style="width:${pct}%"></div></div>
       </div>
+      <div style="height:24px"></div>
     </div>
   </div>`;
 }
 
 // ── PENALTY ──
+
+function penImgHTML(){
+  const ps=getPenSetting();
+  const src=ps.imgUrl||HANDCREAM_IMG;
+  const name=ps.name||'핸드크림';
+  return src?'<img src="'+src+'" class="pen-img" alt="'+name+'">':"";
+}
+
 function penaltyCardHTML(uid){
   const info=activePenaltyInfo(uid);
   if(!info) return`<button class="add-week-btn" onclick="openWeekModal(null)">+ 이번 주 목표 추가</button>`;
@@ -952,7 +1001,7 @@ function penaltyCardHTML(uid){
   }
   const isPenaltyHandcream = originWeek.penalty&&originWeek.penalty.includes('핸드크림');
   const iconHTML=isPenaltyHandcream
-    ?`<img src="${HANDCREAM_IMG}" class="pen-img" alt="핸드크림">`
+    ?penImgHTML()
     :`<div style="width:136px;height:176px;border-radius:10px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:60px;flex-shrink:0">${originWeek.emoji||'🫙'}</div>`;
   const isRolled=rollCount>0;
   const originNote=isRolled
@@ -974,10 +1023,15 @@ function penaltyCardHTML(uid){
     <div class="pen-foot">
       <div class="pen-bar-labels"><span>${footerTxt}</span><span>${barPct}%</span></div>
       <div class="pen-bar"><div class="pen-bar-fill ${state}" style="width:${barPct}%"></div></div>
-      ${(status==='failed'||daysLeft<=0)
-        ? `<div onclick="window.open('https://kko.to/X2Co1MkbLR','_blank')" style="margin-top:12px;background:#FEE500;border-radius:10px;padding:12px 16px;text-align:center;cursor:pointer;font-size:13px;font-weight:700;color:#191919;font-family:var(--sans);">카카오톡 선물하기</div>`
-        : `<div style="margin-top:12px;background:#F0F0F0;border-radius:10px;padding:12px 16px;text-align:center;cursor:not-allowed;font-size:13px;font-weight:700;color:#AAAAAA;font-family:var(--sans);opacity:0.6;">카카오톡 선물하기</div>`
-      }
+      ${(()=>{
+        const lw=latestW(currentUser);
+        const hasRecord = lw!==null;
+        const failedGoal = hasRecord && cw && lw>cw.goal && daysLeft<=0;
+        if(failedGoal){
+          const ps2=getPenSetting();return `<div onclick="window.open('${ps2.link}','_blank')" style="margin-top:12px;background:#FEE500;border-radius:10px;padding:12px 16px;text-align:center;cursor:pointer;font-size:13px;font-weight:700;color:#191919;font-family:var(--sans);">상대방에게 선물하기 🎁</div>`;
+        }
+        const ps3=getPenSetting();return `<div onclick="window.open('${ps3.link}','_blank')" style="margin-top:12px;background:#FEE500;border-radius:10px;padding:12px 16px;text-align:center;cursor:pointer;font-size:13px;font-weight:700;color:#191919;font-family:var(--sans);">선물 미리보기</div>`;
+      })()}
     </div>
   </div>`;
 }
@@ -1016,7 +1070,7 @@ function vsHTML(){
     const leader=diff<0?USERS['A'].name:diff>0?USERS['B'].name:'동률';
     const gap=Math.abs(diff).toFixed(1);
     h2h=`<div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center;margin-bottom:14px">
-      <div style="font-size:11px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">현재 순위</div>
+      <div style="font-size:12px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">현재 순위</div>
       <div style="font-size:20px;font-weight:500;color:var(--text)">${diff===0?'🤝 동률':`${diff<0?USERS['A'].emoji:USERS['B'].emoji} ${leader} 리드`}</div>
       ${diff!==0?`<div style="font-size:13px;color:var(--text2);margin-top:4px">${gap}kg 차이</div>`:''}
     </div>`;
@@ -1065,9 +1119,9 @@ function calHTML(){
     const dStr=`${sm}월 ${sd}일 (${dayN[new Date(sy,sm-1,sd).getDay()]})`;
     const isPast=new Date(sy,sm-1,sd)<=new Date(new Date().setHours(0,0,0,0));
     const mg=S().weeks.find(w=>w.date===selDate);
-    const gNote=mg?`<div style="background:var(--user-color,#111);color:#fff;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:12px;font-weight:600;text-align:center;">⚖️ 몸무게를 측정하는 날이에요!</div><div style="font-size:11px;color:var(--text2);margin-bottom:8px;">목표: ${mg.goal.toFixed(1)}kg · 벌칙: ${mg.penalty}</div>`:'';
+    const gNote=mg?`<div style="background:var(--user-color,#111);color:#fff;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:12px;font-weight:600;text-align:center;">⚖️ 몸무게를 측정하는 날이에요!</div><div style="font-size:12px;color:var(--text2);margin-bottom:8px;">목표: ${mg.goal.toFixed(1)}kg · 벌칙: ${mg.penalty}</div>`:'';
     if(rec){
-      panel=`<div class="day-panel show"><div class="dp-hdr"><span class="dp-date">${dStr}</span><button class="dp-close" onclick="closePan()">×</button></div>${gNote}<div class="dp-existing"><div><div class="dp-ev">${rec.w.toFixed(1)} kg</div>${rec.note?`<div style="font-size:11px;color:var(--text3)">${rec.note}</div>`:''}</div><button class="dp-del" onclick="delRec('${selDate}')">삭제</button></div></div>`;
+      panel=`<div class="day-panel show"><div class="dp-hdr"><span class="dp-date">${dStr}</span><button class="dp-close" onclick="closePan()">×</button></div>${gNote}<div class="dp-existing"><div><div class="dp-ev">${rec.w.toFixed(1)} kg</div>${rec.note?`<div style="font-size:12px;color:var(--text3)">${rec.note}</div>`:''}</div><button class="dp-del" onclick="delRec('${selDate}')">삭제</button></div></div>`;
     }else if(isPast){
       panel=`<div class="day-panel show"><div class="dp-hdr"><span class="dp-date">${dStr}</span><button class="dp-close" onclick="closePan()">×</button></div>${gNote}<div class="dp-row"><div class="dp-wrap"><input type="number" class="dp-input" id="dpW" placeholder="${USERS[currentUser].start}" step="0.1"><span class="dp-unit">kg</span></div><button class="dp-save" onclick="savePan('${selDate}')">저장</button></div><textarea class="dp-note" id="dpNote" placeholder="메모 (선택)" rows="2"></textarea></div>`;
     }
@@ -1109,10 +1163,10 @@ function weeksHTML(){
       <div class="wli-top">
         <div>
           <div class="wli-label">${fmtKey(w.date)} 주차</div>
-          <div style="margin-top:5px"><span style="font-size:10px;color:${chipC};background:${chipBg};padding:2px 8px;border-radius:10px;font-family:var(--mono)">${chipTxt}</span></div>
+          <div style="margin-top:5px"><span style="font-size:12px;color:${chipC};background:${chipBg};padding:2px 8px;border-radius:10px;font-family:var(--mono)">${chipTxt}</span></div>
         </div>
         <div style="display:flex;gap:6px;align-items:center">
-          <button onclick="openWeekModal(${idx})" style="background:none;border:1px solid var(--border2);border-radius:6px;padding:5px 10px;color:var(--text3);font-size:11px;cursor:pointer;font-family:var(--mono)">수정</button>
+          <button onclick="openWeekModal(${idx})" style="background:none;border:1px solid var(--border2);border-radius:6px;padding:5px 10px;color:var(--text3);font-size:12px;cursor:pointer;font-family:var(--mono)">수정</button>
           <button class="wli-del" onclick="deleteWeek(${idx})">×</button>
         </div>
       </div>
@@ -1170,6 +1224,8 @@ function postRender(){
   const tw=document.getElementById('todayW');
   if(tw) tw.addEventListener('keydown',e=>{if(e.key==='Enter')saveToday();});
   // Live plan preview in profile modal
+  const penImgEl=document.getElementById('penImgUrl');
+  if(penImgEl) penImgEl.addEventListener('input',updatePenPreview);
   ['profStartW','profFinalGoal'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.addEventListener('input', updatePlanPreview);
@@ -1184,6 +1240,15 @@ function loadMessages(){
 }
 function saveMessages(msgs){
   localStorage.setItem('nmp_chat', JSON.stringify(msgs));
+}
+
+
+function chatComingSoonHTML(){
+  return`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:60vh;gap:12px;padding:20px;">
+    <div style="font-size:40px;">💬</div>
+    <div style="font-size:18px;font-weight:700;font-family:var(--sans);color:var(--text);">채팅</div>
+    <div style="font-size:13px;color:var(--text3);font-family:var(--sans);">(준비중)</div>
+  </div>`;
 }
 
 function chatHTML(){
@@ -1238,6 +1303,48 @@ function sendChat(){
 setInterval(()=>{
   if(tab==='chat') render();
 },3000);
+
+
+// ── PENALTY SETTING ──
+function loadPenSetting(){
+  try{return JSON.parse(localStorage.getItem('nmp_penalty')||'null');}
+  catch{return null;}
+}
+function savePenSettingData(data){
+  localStorage.setItem('nmp_penalty', JSON.stringify(data));
+}
+function getPenSetting(){
+  return loadPenSetting() || {name:'Buly 1803 핸드크림', link:'https://kko.to/X2Co1MkbLR', imgUrl:''};
+}
+
+function openPenSetting(){
+  const p = getPenSetting();
+  document.getElementById('penName').value = p.name||'';
+  document.getElementById('penLink').value = p.link||'';
+  document.getElementById('penImgUrl').value = p.imgUrl||'';
+  updatePenPreview();
+  document.getElementById('penSettingBg').classList.add('open');
+}
+function closePenSetting(){
+  document.getElementById('penSettingBg').classList.remove('open');
+}
+function updatePenPreview(){
+  const url = document.getElementById('penImgUrl').value.trim();
+  const preview = document.getElementById('penImgPreview');
+  const img = document.getElementById('penImgPreviewImg');
+  if(url){preview.style.display='block';img.src=url;}
+  else{preview.style.display='none';}
+}
+function savePenSetting(){
+  const name = document.getElementById('penName').value.trim();
+  const link = document.getElementById('penLink').value.trim();
+  const imgUrl = document.getElementById('penImgUrl').value.trim();
+  if(!name){alert('상품명을 입력해주세요.');return;}
+  if(!link){alert('카카오 선물하기 링크를 입력해주세요.');return;}
+  savePenSettingData({name, link, imgUrl});
+  closePenSetting();
+  render();
+}
 
 // ── INIT ──
 async function init(){
